@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="poker.PokerModel" %>
+<%@ page import="PokerModel" %>
 
 <%
 PokerModel model = (PokerModel)request.getAttribute("model");
@@ -20,7 +20,7 @@ String label = model.getButtonLabel();
 チップ：<%=model.getChips() %>
 <hr>
 <%= model.getMessage() %>
-<form action="/s1932069/PokerServlet" method="POST">
+<form action="/PokerServlet" method="POST">
 <table>
 <tr>
 <td><img src="cards/<%= model.getHandcardAt(0) %>.png" width="100" height="150"></td>
@@ -40,6 +40,6 @@ String label = model.getButtonLabel();
 <input type="submit" value="<%= label %>">
 </form>
 <hr>
-<a href="/s1932069/PokerServlet">リセット</a>
+<a href="/PokerServlet">リセット</a>
 </body>
 </html>
